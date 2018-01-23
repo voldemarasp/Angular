@@ -26,4 +26,48 @@ export class TestService {
   	});
   }
 
+  getAllCategories() {
+  	  	return this.http.get('https://api.chucknorris.io/jokes/categories').map( (response: Response) => { 
+
+  		console.log(response.json()); 
+  		return response.json(); 
+  	});
+  }
+
+  getCategoryJoke(value:any) {
+  	  	return this.http.get('https://api.chucknorris.io/jokes/random?category='+value).map( (response: Response) => { 
+
+  		console.log(response.json()); 
+  		return response.json(); 
+  	});
+  }
+
+  getJokesByValue(value:any) {
+  	return this.http.get('https://api.chucknorris.io/jokes/search?query='+value).map( (response: Response) => { 
+
+  		console.log(response.json()); 
+  		return response.json(); 
+  	});
+  }
+
+    getDog() {
+  	return this.http.get('https://dog.ceo/api/breeds/list').map( (response: Response) => { 
+
+  		console.log(response.json()); 
+  		return response.json(); 
+  	});
+  }
+
+      getDogImage() {
+  	return this.http.get('https://dog.ceo/api/breeds/list').map( (response: Response) => { 
+
+  		console.log(response.json()); 
+  		return response.json(); 
+  	});
+  }
+
+  displayVal(value:any) {
+  	return 'suveike';
+  }
+
 }

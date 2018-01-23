@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
 
 import { TestService } from './test/test.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TestService } from './test/test.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    NgbModule.forRoot()
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

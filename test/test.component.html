@@ -1,7 +1,19 @@
+
+<div class="input-control">
+	<select (change)="categoryChanged($event.target.value)" class="category form-control mt-3 mb-3" name="category">
+		<option value="">Select category</option>
+		<option *ngFor="let category of jokeCatList" value="{{category}}">{{category}}</option>
+	</select>
 <p>
   {{joke?.value}}
 </p>
+	<input class="form-control mt-3 mb-3" type="text" (input)="searchJoke($event.target.value)" name="search" value="">
+</div>
 
-<p>
-  {{jokeCat?.value}}
-</p>
+<p *ngFor="let juokelis of jokes">{{juokelis?.value}}</p>
+
+<h2>Dog breeds by the way</h2>
+
+{{testas}}
+<p *ngFor="let sunelis of dogs"><img [src]="displayVal(sunelis)">{{sunelis}}</p>
+
