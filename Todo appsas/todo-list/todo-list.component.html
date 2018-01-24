@@ -1,0 +1,12 @@
+<div class="nav">
+	<a routerLink="/create">Create new Todo</a>
+</div>
+
+<div class="todo-lists">
+	<h1>My Todo</h1>
+
+<ul>
+	<li *ngFor="let todo of todos | async"><a routerLink="/edit/{{todo.key}}">{{todo.title}}</a></li>
+</ul>
+
+</div>

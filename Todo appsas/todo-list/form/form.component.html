@@ -1,0 +1,17 @@
+<div class="todo">
+
+	<form (ngSubmit)='onSubmit(pav)' #pav='ngForm'>
+		<div class="form-group">
+			<label>Title</label><br>
+			<input type="text" [(ngModel)]="todo.title" name="title">
+		</div>
+		<div class="form-group">
+			<label>Content</label><br>
+			<textarea name="content" [(ngModel)]="todo.content" row="8" cols="16"></textarea>
+		</div>
+		<div class="form-group">
+		<button type="submit" name="button">Submit</button>
+		</div>
+	</form>
+
+</div>
